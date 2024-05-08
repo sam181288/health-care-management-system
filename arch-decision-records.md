@@ -13,6 +13,7 @@
 **Context:** Clinics handle sensitive health data requiring stringent data protection to avoid breaches and ensure privacy.
 
 **Consequences:** Ensures robust data security and legal compliance, increasing trust but requiring careful architecture and potentially higher operational costs to maintain compliance standards.
+
 **Status:** Accepted
 
 ### ADR 3: System Integration with Existing Software
@@ -39,5 +40,7 @@
 **Context:** Clinics need to generate detailed reports for clinical decisions, compliance, and operational management, necessitating robust analytics capabilities.
 
 **Consequences:** Provides critical insights and supports data-driven decisions, enhancing clinic services but requiring advanced data processing tools and potentially increasing the complexity of the system.
+
+**Status:** Accepted
 
 **Status:** Accepted
