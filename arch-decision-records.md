@@ -42,5 +42,3 @@
 **Consequences:** Provides critical insights and supports data-driven decisions, enhancing clinic services but requiring advanced data processing tools and potentially increasing the complexity of the system.
 
 **Status:** Accepted
-
-**Status:** Accepted
