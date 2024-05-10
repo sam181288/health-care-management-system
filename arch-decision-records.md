@@ -1,13 +1,19 @@
-### ADR 1: Deployment Model - Cloud-Based vs On-Premises
+# ADRs for Health care management system
+
+## ADR 1: Deployment Model - Cloud-Based vs On-Premises
+
 **Decision:** Adopt a cloud-based deployment model for the system.
 
-**Context:** Given the operational needs for flexibility, scalability, and remote access, a cloud-based solution is ideal for clinics that may lack extensive IT infrastructure.
+**Context:** Business strategy of the product is to create a reusable lite version of health care management software that can be easily installed and configured for small to medium sized private clinics. Keeping business strategy in ming, product should have flexibility, scalability, and remote access. A medium sized clinic lacks extensive IT infrastructure.
+
+**Rationale:** As major demographic for the product is a small to medium sized clinic, cloud based product will be right deployment to allow sclability, flexibility as per user usage.
 
 **Consequences:** This approach offers enhanced scalability and accessibility but relies on dependable internet connectivity and involves recurring subscription costs. It also simplifies system updates and maintenance.
 
 **Status:** Accepted
 
-### ADR 2: Compliance with Data Protection Regulations
+## ADR 2: Compliance with Data Protection Regulations
+
 **Decision:** Implement a data storage solution that adheres strictly to HIPAA and other relevant health data protection regulations.
 
 **Context:** Clinics handle sensitive health data requiring stringent data protection to avoid breaches and ensure privacy.
@@ -16,25 +22,41 @@
 
 **Status:** Accepted
 
-### ADR 3: System Integration with Existing Software
-**Decision:** Develop the system with modular architecture and open APIs to facilitate integration with existing EHR and practice management software.
+## ADR 3: Disaster Recovery and Business Continuity Plan
 
-**Context:** Clinics already use various software systems; hence, seamless integration is essential to ensure continuous workflow and data integrity.
+**Decision:** Implement a comprehensive disaster recovery plan with regular backups and data replication to a geographically separate location.
 
-**Consequences:** Enhances user adoption and operational efficiency but requires rigorous integration testing and maintenance to handle data interchange and potential software interface conflicts.
+**Context:** Need to ensure system availability and data integrity in case of outages or disruptions.
 
-**Status:** Accepted
+**Alternatives Considered:** Less frequent backups, relying solely on local storage.
 
-### ADR 4: User Interface and Experience Design
-**Decision:** Focus on creating an intuitive, user-friendly interface optimized for various user proficiency levels.
+**Consequences:**
 
-**Context:** The system's effectiveness depends significantly on its usability across diverse clinic staff, including those with limited tech expertise.
+* **Benefits:** Minimized downtime, reduced data loss, improved patient care continuity.
 
-**Consequences:** Reduces the learning curve and enhances user engagement but might increase upfront design and development efforts to ensure accessibility and ease of use.
+* **Drawbacks:** Additional infrastructure and maintenance costs.
 
 **Status:** Accepted
 
-### ADR 5: Advanced Reporting and Analytical Capabilities
+## ADR 4: Authentication and Authorization
+
+**Decision:** Implement multi-factor authentication (MFA) and RBAC for secure access to patient data
+
+**Context:** Need to ensure only authorized personnel can access sensitive patient information.
+
+**Alternatives Considered:**
+
+* Single-factor authentication.
+
+**Consequences:**
+
+* Enhanced security, compliance with HIPAA regulations.
+* Potential inconvenience for users with additional login steps.
+
+**Status:** Accepted
+
+## ADR 5: Advanced Reporting and Analytical Capabilities
+
 **Decision:** Integrate advanced analytics and flexible, customizable reporting tools within the system.
 
 **Context:** Clinics need to generate detailed reports for clinical decisions, compliance, and operational management, necessitating robust analytics capabilities.
